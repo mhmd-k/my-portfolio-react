@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BiUser } from "react-icons/bi";
-import { BsFillCheckCircleFill } from "react-icons/bs";
+import { BsFillSendFill, BsFillCheckCircleFill } from "react-icons/bs";
 import { AiOutlineMail, AiFillInfoCircle } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 
@@ -98,7 +98,9 @@ function Contact() {
                     <div></div>
                   </div>
                 ) : (
-                  "Send"
+                  <>
+                    Send <BsFillSendFill />
+                  </>
                 )}
               </span>
             </button>

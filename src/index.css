@@ -914,6 +914,10 @@ textarea {
 .contact form button {
   width: fit-content;
 }
+.contact form button svg {
+  margin-left: 5px;
+  font-size: 14px;
+}
 /* end social */
 /* footer */
 footer {
