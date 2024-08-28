@@ -21,8 +21,21 @@ import notesApp from "../assets/images/notes-app.png";
 import quiz from "../assets/images/quiz-app.png";
 import quoteMachine from "../assets/images/quote machine.png";
 import drumMachine from "../assets/images/drum-machine.png";
+import tourismHelper from "../assets/images/tourism-helper.jpg";
 
 export const projectsData = [
+  {
+    image: tourismHelper,
+    title: "Travel-Helper",
+    disc: "a system that helps the user to create a trip that matches his preferences. The generated trip has an interactive map that navigates the user in his itinerary. The generated trip has the shortest possible path, this was implemented using Dijkstra's algorithm. The system also has a recommender system that uses content-based filtering to recommend places to the user.",
+    github: "https://github.com/mhmd-k/Tourism-System",
+    footer: "TS react material-UI laravel Mysql python Tensorflow",
+    filter: {
+      react: true,
+      bootstrap: true,
+      js: false,
+    },
+  },
   {
     image: unsen,
     title: "Unsen",
@@ -55,7 +68,7 @@ export const projectsData = [
     disc: "a simple blog website built with react and redux where the user can apply all the CRUD operations",
     github: "https://github.com/mhmd-k/blog",
     link: "https://blog1222.netlify.app/",
-    footer: "react redux materialUI",
+    footer: "react redux material-UI",
     filter: {
       react: true,
       bootstrap: false,

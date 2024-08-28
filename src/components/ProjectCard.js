@@ -7,33 +7,32 @@ function ProjectCard({ image, title, disc, github, link, codepen, footer }) {
   return (
     <div className="box">
       <div className="image">
-        <img src={image} loading="lazy" />
+        <img src={image} loading="lazy" alt={title} />
       </div>
       <h4>
         <AiFillFolderOpen />
         {title}
       </h4>
       <div className="box-body">
-        <p>{disc}</p>
+        <p className="project-description">{disc}</p>
       </div>
       <div className="box-footer">
         <p>{footer}</p>
         <div className="links">
-          {github && link ? (
-            <>
-              <a href={github} target="_blanck">
-                <LuGithub />
-              </a>{" "}
-              <a href={link} target="_blanck">
-                <LuExternalLink />
-              </a>
-            </>
-          ) : (
-            <>
-              <a href={codepen} target="_blanck" title="codepen">
-                <LuCodepen />
-              </a>
-            </>
+          {github && (
+            <a href={github} target="_blanck">
+              <LuGithub />
+            </a>
+          )}
+          {link && (
+            <a href={link} target="_blanck">
+              <LuExternalLink />
+            </a>
+          )}
+          {codepen && (
+            <a href={codepen} target="_blanck" title="codepen">
+              <LuCodepen />
+            </a>
           )}
         </div>
       </div>

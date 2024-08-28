@@ -737,6 +737,26 @@ p.quto svg {
   margin: 0;
   margin-bottom: 15px;
   color: var(--text-color);
+  max-height: 100px;
+  overflow-y: scroll;
+}
+.box-body p::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.box-body p::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.box-body p::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--text-color);
+}
+.box-body p::-webkit-scrollbar-thumb:hover {
+  background: rgba(216, 216, 216, 0.9);
+}
+.box-body p::-webkit-scrollbar-thumb:active {
+  background: rgba(216, 216, 216, 0.9);
 }
 .box-footer {
   display: flex;
