@@ -9,10 +9,12 @@ import {
   BiSolidQuoteAltLeft,
   BiSolidDownload,
   BiSolidQuoteAltRight,
+  BiLogoTypescript,
 } from "react-icons/bi";
 import image from "../assets/images/20220317_073449.jpg";
 import { projectsData } from "../data/projectsData";
 import resume from "../assets/resume.pdf";
+import ZustandIcon from "../assets/polar-bear.png";
 
 function About() {
   return (
@@ -59,7 +61,7 @@ function About() {
                   <BiLogoJavascript /> Javasript
                 </li>
                 <li>
-                  <BiLogoBootstrap /> Bootstrap
+                  <BiLogoTypescript /> Typescript
                 </li>
               </ul>
               <ul>
@@ -67,12 +69,26 @@ function About() {
                   <BiLogoReact /> React
                 </li>
                 <li>
+                  <BiLogoBootstrap /> Bootstrap
+                </li>
+                <li>
                   <BiLogoRedux /> Redux
                 </li>
 
                 <li>
-                  <BiLogoGit /> Git and Github
+                  <BiLogoGit /> Git
                 </li>
+              </ul>
+              <ul>
+                <li>
+                  {/* <img
+                    style={{ marginRight: "10px" }}
+                    src={ZustandIcon}
+                    alt="zustand icon"
+                  />{" "} */}
+                  Zustand
+                </li>
+                <li>Next.js</li>
               </ul>
             </div>
             <div className="resume">
