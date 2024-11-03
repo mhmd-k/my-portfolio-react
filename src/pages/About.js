@@ -28,10 +28,12 @@ function About() {
         <div className="content hidden">
           <div className="text">
             <p>
-              Hello! my name is <span>Mohammad</span> and I am a computer
-              engineering student who enjoys building websites from scratch
-              using <span>HTML</span>, <span>CSS</span>, <span>Bootstrap</span>,
-              and <span>Javascript</span>.
+              Hello! I’m <span>Mohammad</span>, a passionate computer
+              engineering graduate with a love for transforming ideas into
+              interactive, visually appealing websites. With a strong foundation
+              in <span>HTML</span>, <span>CSS</span>, and{" "}
+              <span>JavaScript</span>, I enjoy building web experiences from the
+              ground up, making them both functional and beautiful.
             </p>
             <p>
               I also have good experience using <span>React</span> to build web
@@ -43,7 +45,7 @@ function About() {
             </p>
             <p>
               Throughout my journey, I have successfully completed over
-              <span> {projectsData.length - 1}</span> projects.
+              <span> {projectsData.length - 2}</span> projects.
             </p>
             <p>
               I am currently learning <span>React native</span>.
@@ -80,14 +82,7 @@ function About() {
                 </li>
               </ul>
               <ul>
-                <li>
-                  {/* <img
-                    style={{ marginRight: "10px" }}
-                    src={ZustandIcon}
-                    alt="zustand icon"
-                  />{" "} */}
-                  Zustand
-                </li>
+                <li>Zustand</li>
                 <li>Next.js</li>
               </ul>
             </div>
