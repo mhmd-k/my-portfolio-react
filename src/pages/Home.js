@@ -8,7 +8,7 @@ function Home() {
       <div className="landing" id="home">
         <div key={theme} className="container">
           <h1 className="animated">Mohammad Alkayyali</h1>
-          <p className="animated">Front-end Web Developer</p>
+          <p className="animated">Software Developer</p>
         </div>
       </div>
     </main>
