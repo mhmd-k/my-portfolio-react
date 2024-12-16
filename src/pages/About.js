@@ -11,10 +11,9 @@ import {
   BiSolidQuoteAltRight,
   BiLogoTypescript,
 } from "react-icons/bi";
-import image from "../assets/images/20220317_073449.jpg";
+import image from "../assets/images/mk.jpg";
 import { projectsData } from "../data/projectsData";
 import resume from "../assets/resume.pdf";
-import ZustandIcon from "../assets/polar-bear.png";
 
 function About() {
   return (
@@ -47,9 +46,7 @@ function About() {
               Throughout my journey, I have successfully completed over
               <span> {projectsData.length - 2}</span> projects.
             </p>
-            <p>
-              I am currently learning <span>React native</span>.
-            </p>
+            <p>I am always learning.</p>
             <h3>My Skills:</h3>
             <div className="skills">
               <ul>
