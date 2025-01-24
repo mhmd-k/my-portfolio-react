@@ -1074,7 +1074,6 @@ div.spinner div {
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
   display: flex;
-  justify-content: center;
   align-items: center;
   color: #4caf50;
   opacity: 0;
@@ -1095,6 +1094,12 @@ div.spinner div {
 .alert.show {
   opacity: 1;
   z-index: 10;
+}
+.close-alert-btn {
+  border: none;
+  margin-left: auto;
+  color: #f44336;
+  cursor: pointer;
 }
 /* theme animation */
 @keyframes theme {

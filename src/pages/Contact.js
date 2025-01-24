@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { BiUser } from "react-icons/bi";
 import { BsFillSendFill, BsFillCheckCircleFill } from "react-icons/bs";
 import { AiOutlineMail, AiFillInfoCircle } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
-  const [fromData, setFomrData] = useState({
+  const [fromData, setFormData] = useState({
     user_name: "",
     user_email: "",
     message: "",
@@ -23,37 +24,61 @@ function Contact() {
   }, [show]);
 
   const handleChange = (event) => {
-    setFomrData((prevState) => ({
+    setFormData((prevState) => ({
       ...prevState,
       [event.target.name]: event.target.value,
     }));
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+
+    setError(null);
     setLoading(true);
-    emailjs
-      .sendForm(
+
+    try {
+      const res = await emailjs.sendForm(
         "service_du5cgx8",
         "contact_form",
         formRef.current,
         "tACKh8YPGqJC4gbCa"
-      )
-      .catch((err) => setError(err))
-      .finally(() => {
-        setLoading(false);
-        setShow(true);
-        setFomrData({ user_email: "", user_name: "", message: "" });
-      });
+      );
+
+      // console.log("response: ", res);
+
+      if (res.status === 200) {
+        setFormData({ user_email: "", user_name: "", message: "" });
+      } else {
+        throw new Error("something went wrong");
+      }
+    } catch (error) {
+      // console.log("error: ", error);
+
+      setError("something went wrong");
+    } finally {
+      setLoading(false);
+      setShow(true);
+    }
   };
 
   return (
     <>
       <div className={show && !error ? "alert show" : "alert"}>
-        Message has been sent <BsFillCheckCircleFill />
+        <BsFillCheckCircleFill style={{ marginRight: "10px" }} /> Message has
+        been sent
+        <button
+          className="close-alert-btn"
+          onClick={() => setShow(false)}
+          style={{ color: "var(--text-color)" }}
+        >
+          <IoClose />
+        </button>
       </div>
       <div className={error && show ? "alert error show" : "alert error"}>
-        {error?.text.slice(0, 42)}... <AiFillInfoCircle />
+        <AiFillInfoCircle style={{ marginRight: "10px" }} /> {error}
+        <button className="close-alert-btn" onClick={() => setShow(false)}>
+          <IoClose />
+        </button>
       </div>
       <section className="contact" id="contact">
         <div className="container">
