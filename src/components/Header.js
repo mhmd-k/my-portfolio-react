@@ -21,10 +21,7 @@ function Header() {
         <div className="container">
           <div className="logo animated">
             <a href="#home" title="logo">
-              <img
-                src={theme === "dark" ? lightLogo : Darklogo}
-                alt="logo image"
-              />
+              <img src={theme === "dark" ? lightLogo : Darklogo} alt="logo" />
             </a>
           </div>
           <div className="nav-icon animated" onClick={handleClick}>
@@ -50,7 +47,7 @@ function Header() {
               <a href="#contact">CONTACT</a>
             </li>
             <li onClick={changeTheme}>
-              <a href="#">{theme === "dark" ? <BiSun /> : <BiMoon />}</a>
+              <a href="#home">{theme === "dark" ? <BiSun /> : <BiMoon />}</a>
             </li>
           </ul>
         </div>

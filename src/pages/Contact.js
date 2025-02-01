@@ -1,9 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { BiUser } from "react-icons/bi";
-import { BsFillSendFill, BsFillCheckCircleFill } from "react-icons/bs";
-import { AiOutlineMail, AiFillInfoCircle } from "react-icons/ai";
-import { IoClose } from "react-icons/io5";
+import { BsFillSendFill } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
+
+const toastStyle = {
+  backgroundColor: "var(--bg-color)",
+  color: "var(--title-color)",
+};
 
 function Contact() {
   const [fromData, setFormData] = useState({
@@ -12,7 +17,6 @@ function Contact() {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [show, setShow] = useState(false);
 
   const formRef = useRef();
@@ -33,7 +37,6 @@ function Contact() {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    setError(null);
     setLoading(true);
 
     try {
@@ -48,13 +51,19 @@ function Contact() {
 
       if (res.status === 200) {
         setFormData({ user_email: "", user_name: "", message: "" });
+
+        toast.success("Message sent successfully", {
+          style: toastStyle,
+        });
       } else {
         throw new Error("something went wrong");
       }
     } catch (error) {
       // console.log("error: ", error);
 
-      setError("something went wrong");
+      toast.error("something went wrong", {
+        style: toastStyle,
+      });
     } finally {
       setLoading(false);
       setShow(true);
@@ -63,23 +72,7 @@ function Contact() {
 
   return (
     <>
-      <div className={show && !error ? "alert show" : "alert"}>
-        <BsFillCheckCircleFill style={{ marginRight: "10px" }} /> Message has
-        been sent
-        <button
-          className="close-alert-btn"
-          onClick={() => setShow(false)}
-          style={{ color: "var(--text-color)" }}
-        >
-          <IoClose />
-        </button>
-      </div>
-      <div className={error && show ? "alert error show" : "alert error"}>
-        <AiFillInfoCircle style={{ marginRight: "10px" }} /> {error}
-        <button className="close-alert-btn" onClick={() => setShow(false)}>
-          <IoClose />
-        </button>
-      </div>
+      <Toaster />
       <section className="contact" id="contact">
         <div className="container">
           <h2 className="main-title">CONTACT</h2>

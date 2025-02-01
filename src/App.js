@@ -8,6 +8,7 @@ import BigScreenWrapper from "./components/BigScreenWrapper";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import AnimationDiv from "./components/AnimationDiv";
+import MobileThemeButton from "./components/MobileThemeButton";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <ThemeProvider>
+        <MobileThemeButton />
         <AnimationDiv />
         <Header />
         <BigScreenWrapper />
