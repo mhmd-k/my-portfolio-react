@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { BiUser } from "react-icons/bi";
 import { BsFillSendFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
@@ -17,15 +17,8 @@ function Contact() {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [show, setShow] = useState(false);
 
   const formRef = useRef();
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShow(false);
-    }, 4000);
-  }, [show]);
 
   const handleChange = (event) => {
     setFormData((prevState) => ({
@@ -66,7 +59,6 @@ function Contact() {
       });
     } finally {
       setLoading(false);
-      setShow(true);
     }
   };
 
