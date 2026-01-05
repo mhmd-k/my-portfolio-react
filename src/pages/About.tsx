@@ -18,8 +18,8 @@ import { FaNodeJs } from "react-icons/fa";
 function About() {
   return (
     <section className="about" id="about">
+      <h2 className="main-title hidden">ABOUT ME</h2>
       <div className="container">
-        <h2 className="main-title hidden">ABOUT ME</h2>
         <p className="quto hidden">
           <BiSolidQuoteAltLeft /> do what you love, love what you do{" "}
           <BiSolidQuoteAltRight />
@@ -75,7 +75,7 @@ function About() {
               and continuous improvement — I am always <span> learning</span>.
             </p>
 
-            <h3>My Skills:</h3>
+            <div className="skills-heading">My Skills:</div>
             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               <li className="flex gap-2">
                 <BiLogoHtml5 className="text-primary w-6 h-6" /> HTML
@@ -116,7 +116,7 @@ function About() {
               </li>
             </ul>
             <div className="resume">
-              <button className="btn">
+              <button className="btn" name="resume">
                 <a href="/resume.pdf" className="download" download>
                   Resume <BiSolidDownload />
                 </a>

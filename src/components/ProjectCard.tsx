@@ -82,7 +82,10 @@ function ProjectCard({
           </p>
           <CardAction className="flex gap-2 mt-auto">
             <Dialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
-              <DialogTrigger className="cursor-pointer hover:text-primary transition-colors">
+              <DialogTrigger
+                className="cursor-pointer hover:text-primary transition-colors"
+                aria-label="project-info"
+              >
                 <BiInfoCircle className="w-5 h-5" />
               </DialogTrigger>
               <DialogContent

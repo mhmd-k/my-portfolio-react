@@ -31,10 +31,12 @@ function App() {
       <AnimationDiv />
       <Header />
       <BigScreenWrapper />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <main>
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+      </main>
       <Footer />
       <Toaster />
     </ThemeProvider>

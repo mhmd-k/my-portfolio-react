@@ -8,6 +8,8 @@ const MobileThemeButton = () => {
     <button
       className="mobile-theme-btn z-1000"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      name="toggle-theme"
+      aria-label="toggle-theme"
     >
       {theme === "dark" ? <BiSun /> : <BiMoon />}
     </button>

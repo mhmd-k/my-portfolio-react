@@ -540,7 +540,7 @@ p.quto svg {
 .about .container .content .text p span {
   color: var(--primary);
 }
-.about .container .content .text h3 {
+.about .container .content .text .skills-heading {
   margin: 10px 0;
   font-weight: 400;
 }
@@ -864,9 +864,6 @@ footer .social-footer a:hover svg {
 footer p {
   color: var(--text-color);
   letter-spacing: 1px;
-}
-footer p span {
-  color: var(--primary);
 }
 /* end footer */
 /* dark mode button */

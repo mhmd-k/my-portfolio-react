@@ -47,6 +47,7 @@ function BigScreenWrapper() {
         id="dark-mode"
         className="animated"
         title={theme === "light" ? "dark-mode" : "light-mode"}
+        name="toggle-theme"
       >
         {theme === "light" ? (
           <BiMoon onClick={() => setTheme("dark")} />

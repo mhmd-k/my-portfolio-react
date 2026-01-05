@@ -90,7 +90,7 @@ function Contact() {
               required
             ></textarea>
           </div>
-          <button className="btn" type="submit">
+          <button className="btn" type="submit" name="send-message">
             <span>
               {loading ? (
                 <div className="spinner">
