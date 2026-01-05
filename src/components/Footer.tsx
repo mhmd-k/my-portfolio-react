@@ -40,9 +40,6 @@ function Footer() {
             <AiOutlineWhatsApp />
           </a>
         </div>
-        <p className="mt-4 md:mt-0">
-          Built by <span className="text-primary">Mohammad Alkayyali</span>
-        </p>
       </div>
     </footer>
   );
