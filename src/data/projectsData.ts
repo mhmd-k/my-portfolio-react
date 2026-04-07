@@ -29,10 +29,10 @@ export const projectsData: Project[] = [
   {
     images: ["/unsen/1.webp", "/unsen/2.webp", "/unsen/3.webp"],
     title: "Unsen",
-    desc: "E-commerce website built with React, React-router, React-bootstrap. the state of this app is managed using React Context API.",
+    desc: "A full-stack e-commerce application supporting both customer and seller workflows, designed to handle real-world online shopping scenarios. The platform enables sellers to manage their business end-to-end, including product creation and editing, sales analytics, and invoice tracking, while customers can browse products, place orders, and manage their purchase history. Built with a modern frontend stack using React, TypeScript, Tailwind CSS, and shadcn/ui for a responsive and scalable user interface. The backend is powered by Node.js and Express.js, with MySQL handling data persistence and relational data modeling. Note: The application is deployed on Render using free-tier services. As a result, the backend may enter a sleep state after periods of inactivity (~15 minutes), causing a short delay on the first request.",
     github: "https://github.com/mhmd-k/Unsen",
-    link: "https://mhmd-k.github.io/Unsen/",
-    footer: "React bootstrap",
+    link: "https://unsen-frontend.onrender.com/",
+    footer: "React TS Shadcn Tailwind Node.js express.js MySQL",
   },
   {
     images: ["/music-player.webp"],
