@@ -78,7 +78,7 @@ function ProjectCard({
         </CardContent>
         <CardFooter className="pt-2 flex gap-4 items-center justify-between mt-auto px-4">
           <p className="text-sm [word-spacing:5px] text-primary dark:text-primary">
-            {footer}
+            {footer.split(" ").slice(0, 4).join(" ")}
           </p>
           <CardAction className="flex gap-2 mt-auto">
             <Dialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
